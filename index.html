@@ -12,79 +12,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Random Color Palette Generator! - Semester Project - Benjamin Gallegos</title>
     <link rel="stylesheet" href="./colorPicker.css">
+
+    <!-- Google Fonts: Varela Round; Link: https://fonts.google.com/specimen/Varela+Round -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- Using JQuery for some extra features -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 <body>
 
     <!-- Staring Main -->
     <main>
-        <h1>Random Color Generator!</h1>
+        <div id="intro-box">
+            <p class="intro-text">
+                Welcome to Benjamin Gallegos' semester project for Intermediate Web Programming at Collin College during the Spring 2024 Semester!
+            </p>
+            <p class="intro-text">
+                Objective: Create a working application/website of our choosing. We are also allowed to follow along with an online tutorial to create the application/website with our own spin on it. 
+            </p>
+            <p class="intro-text">
+                Application concept and code followed along for the YouTube Channel, Tyler Potts: <a href="https://www.youtube.com/watch?v=y9F-XzrYIrs&list=PL2V0XMPQmXlFzTI7VMHHIGbAeqm9hAZcL&index=7&t=29s">Build a Color Palette Generator in Javascript - JavaScript beginner tutorial</a>
+            </p>
+        </div>
+
+        <br>
+        <hr class="divider">
+        <br>
+        <hr class="divider">
+        <br>
+
+        <h1>Random Color Palette Generator!</h1>
         <!-- Description and Button for Generator Each Color Palette -->
         <p>
             <!-- Indicates 'Space' or a 'Click' to generate palette -->
-            Press [ <button class="generator-button">SPACE</button> ] to generate a new color palette.
+            Press or Click [ <button class="generator-button">SPACE</button> ] to generate a new color palette containing 5 different colors based on Hex color syntax!
         </p>
 
+        <!-- Adding buttons to use JQuery -->
+        <button id="hideOne">SHOW 1ST COLOR ONLY</button>
+        <br>
+        <button id="hideTwo">SHOW 1ST & 2ND COLOR ONLY</button>
+        <br>
+        <button id="hideThree">SHOW 1ST - 3RD COLOR ONLY</button>
+        <br>
+        <button id="hideFour">SHOW 1ST - 4TH COLOR ONLY</button>
+        <br>
+        <button id="hideFive">SHOW/HIDE ALL FIVE COLORS</button>
+        <br>
+
         <!-- Start of the Generator Output
-        Currently 4 Palettes -->
-        <h4>Generator</h4>
+        Currently 5 Palettes -->
+        <h4>Color Palette:</h4>
 
         <!-- Palette #1 -->
-        <div class="colors">
-            <div class="color">
-                <button class="lock-toggle">
-                    <img src="./images/lock2-svgrepo-com.svg" class="locks">
-                </button>
-                <br>
-                <input type="text" class="color-input" value="#000000">
-                <br>
-                <button class="copy-hex">COPY</button>
+        <div id="clone-one">
+            <div class = "outline">
+                <div class="colors">
+                    <div class="color">
+                        <button class="lock-toggle">
+                            <img src="./images/lock2-svgrepo-com.svg" alt="Image of a Lock Button" class="locks">
+                        </button>
+                        <br>
+                        <input type="text" class="color-input" value="#000000">
+                        <br>
+                        <button class="copy-hex">COPY</button>
+                    </div>
+                </div>
             </div>
         </div>
 
         <br>
 
         <!-- Palette #2 -->
-        <div class="colors">
-            <div class="color">
-                <button class="lock-toggle">
-                    <img src="./images/lock2-svgrepo-com.svg" class="locks">
-                </button>
-                <br>
-                <input type="text" class="color-input" value="#000000">
-                <br>
-                <button class="copy-hex">COPY</button>
+        <div id="clone-two">
+            <div class = "outline">
+                <div class="colors">
+                    <div class="color">
+                        <button class="lock-toggle">
+                            <img src="./images/lock2-svgrepo-com.svg" alt="Image of a Lock Button" class="locks">
+                        </button>
+                        <br>
+                        <input type="text" class="color-input" value="#000000">
+                        <br>
+                        <button class="copy-hex">COPY</button>
+                    </div>
+                </div>
             </div>
         </div>
 
         <br>
 
         <!-- Palette #3 -->
-        <div class="colors">
-            <div class="color">
-                <button class="lock-toggle">
-                    <img src="./images/lock2-svgrepo-com.svg" class="locks">
-                </button>
-                <br>
-                <input type="text" class="color-input" value="#000000">
-                <br>
-                <button class="copy-hex">COPY</button>
+        <div id="clone-three">
+            <div class = "outline">
+                <div class="colors">
+                    <div class="color">
+                        <button class="lock-toggle">
+                            <img src="./images/lock2-svgrepo-com.svg" alt="Image of a Lock Button" class="locks">
+                        </button>
+                        <br>
+                        <input type="text" class="color-input" value="#000000">
+                        <br>
+                        <button class="copy-hex">COPY</button>
+                    </div>
+                </div>
             </div>
         </div>
 
         <br>
 
         <!-- Palette #4 -->
-        <div class="colors">
-            <div class="color">
-                <button class="lock-toggle">
-                    <img src="./images/lock2-svgrepo-com.svg" class="locks">
-                </button>
-                <br>
-                <input type="text" class="color-input" value="#000000">
-                <br>
-                <button class="copy-hex">COPY</button>
+        <div id="clone-four">
+            <div class = "outline">
+                <div class="colors">
+                    <div class="color">
+                        <button class="lock-toggle">
+                            <img src="./images/lock2-svgrepo-com.svg" alt="Image of a Lock Button" class="locks">
+                        </button>
+                        <br>
+                        <input type="text" class="color-input" value="#000000">
+                        <br>
+                        <button class="copy-hex">COPY</button>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <br>
+
+    <!-- Palette #5 *new addition; creation of a 5 color palette-->
+    <div id="clone-five">
+        <div class = "outline">
+            <div class="colors">
+                <div class="color">
+                    <button class="lock-toggle">
+                        <img src="./images/lock2-svgrepo-com.svg" alt="Image of a Lock Button" class="locks">
+                    </button>
+                    <br>
+                    <input type="text" class="color-input" value="#000000">
+                    <br>
+                    <button class="copy-hex">COPY</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </main>
 

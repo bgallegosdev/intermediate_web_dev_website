@@ -4,6 +4,59 @@
 
 // This semester project is based on JavaScript code we learned in class, using it in an application like a JavaScript/HTML/CSS Random Color Palette Generator. Credit to the tutorial I followed online for this project: Source: YouTube/Channel: Tyler Potts/Link: https://www.youtube.com/watch?v=y9F-XzrYIrs&list=PL2V0XMPQmXlFzTI7VMHHIGbAeqm9hAZcL&index=7&t=29s
 
+/*
+TESTING JQUERY CLONE FUNCTION
+$(document).ready(function(){
+    $("#addPalette").click(function(){
+        let lineBreak = document.createElement("br");
+        let clone = $(".clone-use").clone();
+        let clones = $(".outline").clone();
+        $("main").append(lineBreak);
+        $("main").append(clones);
+    });
+});
+*/
+
+$(document).ready(function(){
+    $("#hideOne").click(function(){
+        $("#clone-two").fadeToggle(1000);
+        $("#clone-three").fadeToggle(1000);
+        $("#clone-four").fadeToggle(1000);
+        $("#clone-five").fadeToggle(1000);
+    });
+});
+
+$(document).ready(function(){
+    $("#hideTwo").click(function(){
+        $("#clone-three").fadeToggle(1000);
+        $("#clone-four").fadeToggle(1000);
+        $("#clone-five").fadeToggle(1000);
+    });
+});
+
+$(document).ready(function(){
+    $("#hideThree").click(function(){
+        $("#clone-four").fadeToggle(1000);
+        $("#clone-five").fadeToggle(1000);
+    });
+});
+
+$(document).ready(function(){
+    $("#hideFour").click(function(){
+        $("#clone-five").fadeToggle(1000);
+    });
+});
+
+$(document).ready(function(){
+    $("#hideFive").click(function(){
+        $("#clone-one").fadeToggle(1000);
+        $("#clone-two").fadeToggle(1000);
+        $("#clone-three").fadeToggle(1000);
+        $("#clone-four").fadeToggle(1000);
+        $("#clone-five").fadeToggle(1000);
+    });
+});
+
 class Color {
     constructor (hex, element){
         this.hex = hex;
@@ -77,6 +130,11 @@ class Color {
         this.setHex(hex);
     }
 
+    /*
+        function labeled as copyToClipboard
+        function selects the classes of the HTML input objects and on select the JavaScript API (had to update from online tutorial, new API for copying clipboard was researched and inserted below; Then adds a class to 'copied')
+    */
+
     copyToClipboard(){
         const input = this.element.querySelector('.color-input');
         input.select();
@@ -94,9 +152,13 @@ class Color {
     }
 }
 
-const color_elements = document.querySelectorAll('.colors .color');
 
+const color_elements = document.querySelectorAll('.colors .color');
 const colors = [];
+
+/*
+    loop below selects all inputs, lock buttons, and copy buttons; uses all above JavaScript to call on functions above to set values to each newly created constants. Pushes hex to the array colors.
+*/
 
 for(let i = 0; i < color_elements.length; i++)
 {
@@ -118,12 +180,20 @@ for(let i = 0; i < color_elements.length; i++)
     colors.push(color);
 }
 
+    /*
+        loop below generates Hex numbers on a click to the colors array
+    */
+
     document.querySelector('.generator-button').addEventListener('click', () => {
         for(let i = 0; i < colors.length; i++)
         {
             colors[i].generateHex();
         }
     });
+
+    /*
+        loop below generates Hex numbers on a 'keypress' of the spacebar to the colors array
+    */
 
     document.addEventListener('keypress', (e) => {
         if(e.code.toLowerCase() === 'space') 

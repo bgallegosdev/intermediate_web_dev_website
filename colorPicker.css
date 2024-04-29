@@ -4,20 +4,30 @@ Assignment: Semester Project */
 
 /* This semester project is based on JavaScript code we learned in class, using it in an application like a JavaScript/HTML/CSS Random Color Palette Generator. Credit to the tutorial I followed online for this project: Source: YouTube/Channel: Tyler Potts/Link: https://www.youtube.com/watch?v=y9F-XzrYIrs&list=PL2V0XMPQmXlFzTI7VMHHIGbAeqm9hAZcL&index=7&t=29s */
 
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+  }
+  
+
 :root {
     /* using css variables for standard options below */
-    --primary: #D81E5D;
-    --secondary: #8a4fff;
-    --light: #eee;
-    --grey: #aaa;
-    --dark: #1e2f42;
+    --primary: #ff1a1a;
+    --secondary: #4fffed;
+    --light: rgb(55, 55, 55);
+    --grey: rgb(255, 255, 255);
+    --dark: #c9def6;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family:'Gill Sans', sans-serif;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 button, input{
@@ -42,17 +52,40 @@ main{
     margin: 0 auto;
 }
 
+#intro-box{
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.intro-text{
+    color: #000000;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.divider{
+    width: 70%;
+    height: 5px;
+    margin: auto;
+    background-color: white;
+}
+
 h1{
     color: var(--dark);
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+    /* letter-spacing: 5px; */
 }
 
 p{
     color: var(--grey);
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -60,13 +93,12 @@ p{
     color: var(--primary);
     font-size: inherit;
     font-weight: 700;
-    background:-moz-linear-gradient(to bottom right, var(--primary), var(--secondary));
-    transition: 0.4s ease-out;
+    transition: 0.3s ease-out;
 }
 
 .generator-button:hover{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 h4{
@@ -92,7 +124,7 @@ h4{
     padding: 1rem 1rem;
     border-radius: 1rem;
     color: #fff;
-    background-color: var(--dark);
+    /* background-color: white; */
     transition: 0.4s ease-out;
     border: 2px solid transparent;
 
@@ -101,12 +133,20 @@ h4{
     justify-content: center;
 }
 
+.outline{
+    border: solid;
+    padding: 8px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
 .color.copied{
-    border-color: red;
+    border-color: hsl(226, 100%, 50%);
 }
 
 .lock-toggle {
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .lock-toggle.is-locked{
@@ -115,10 +155,31 @@ h4{
 
 .color-input{
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+}
+
+.copy-hex{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    text-shadow: 1px 1px 3px black;
+}
+
+.copy-hex:hover{
+    font-size: 1.8rem;
 }
 
 .locks{
     width: 30px;
+}
+
+.locks:hover{
+    width: 35px;
+    transition: 0.3s;
 }
 
 /*Following has been edited out of the tutorial due to errors in running application*/
