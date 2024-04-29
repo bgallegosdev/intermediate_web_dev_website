@@ -1,0 +1,93 @@
+<!-- Name: Benjamin Gallegos -->
+<!-- Class: Intermediate Web Programming -->
+<!-- Assignment: Semester Project -->
+
+<!-- This semester project is based on JavaScript code we learned in class, using it in an application like a JavaScript/HTML/CSS Random Color Palette Generator. Credit to the tutorial I followed online for this project: Source: YouTube/Channel: Tyler Potts/Link: https://www.youtube.com/watch?v=y9F-XzrYIrs&list=PL2V0XMPQmXlFzTI7VMHHIGbAeqm9hAZcL&index=7&t=29s -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Random Color Palette Generator! - Semester Project - Benjamin Gallegos</title>
+    <link rel="stylesheet" href="./colorPicker.css">
+</head>
+<body>
+
+    <!-- Staring Main -->
+    <main>
+        <h1>Random Color Generator!</h1>
+        <!-- Description and Button for Generator Each Color Palette -->
+        <p>
+            <!-- Indicates 'Space' or a 'Click' to generate palette -->
+            Press [ <button class="generator-button">SPACE</button> ] to generate a new color palette.
+        </p>
+
+        <!-- Start of the Generator Output
+        Currently 4 Palettes -->
+        <h4>Generator</h4>
+
+        <!-- Palette #1 -->
+        <div class="colors">
+            <div class="color">
+                <button class="lock-toggle">
+                    <img src="./images/lock2-svgrepo-com.svg" class="locks">
+                </button>
+                <br>
+                <input type="text" class="color-input" value="#000000">
+                <br>
+                <button class="copy-hex">COPY</button>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Palette #2 -->
+        <div class="colors">
+            <div class="color">
+                <button class="lock-toggle">
+                    <img src="./images/lock2-svgrepo-com.svg" class="locks">
+                </button>
+                <br>
+                <input type="text" class="color-input" value="#000000">
+                <br>
+                <button class="copy-hex">COPY</button>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Palette #3 -->
+        <div class="colors">
+            <div class="color">
+                <button class="lock-toggle">
+                    <img src="./images/lock2-svgrepo-com.svg" class="locks">
+                </button>
+                <br>
+                <input type="text" class="color-input" value="#000000">
+                <br>
+                <button class="copy-hex">COPY</button>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Palette #4 -->
+        <div class="colors">
+            <div class="color">
+                <button class="lock-toggle">
+                    <img src="./images/lock2-svgrepo-com.svg" class="locks">
+                </button>
+                <br>
+                <input type="text" class="color-input" value="#000000">
+                <br>
+                <button class="copy-hex">COPY</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./colorPicker.js"></script>
+</body>
+</html>
