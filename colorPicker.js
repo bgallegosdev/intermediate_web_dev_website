@@ -17,45 +17,255 @@ $(document).ready(function(){
 });
 */
 
+//First JQuery Button Hides All Palettes Except for Palette One, Using fadeToggle()
 $(document).ready(function(){
+    //BUTTON ONE ANIMATIONS
     $("#hideOne").click(function(){
         $("#clone-two").fadeToggle(1000);
         $("#clone-three").fadeToggle(1000);
         $("#clone-four").fadeToggle(1000);
         $("#clone-five").fadeToggle(1000);
+        //Also fades all the other buttons to ensure no faulty palette makeup
+        $("#hideOne").fadeToggle(1000);
+        $("#hideTwo").fadeToggle(1000);
+        $("#hideThree").fadeToggle(1000);
+        $("#hideFour").fadeToggle(1000);
+        $("#hideFive").fadeToggle(1000);
+        $("#resetButtonTwo").fadeToggle(1000);
+        $("#resetButtonThree").fadeToggle(1000);
+        $("#resetButtonFour").fadeToggle(1000);
+        $("#resetButtonFive").fadeToggle(1000);
     });
-});
+    //Using JQuery over, out parameters for animating hovering over each button
+    $("#hideOne").hover(
+        //over parameter
+        function(){
+        $("#hideOne").animate({fontSize: '2rem'}, "slow");
+    },
+        //out parameter
+        function(){
+        $("#hideOne").animate({fontSize: '1.5rem'}, "slow");
+        }
+    );
+    $("#resetButtonOne").click(function(){
+        $("#clone-two").fadeToggle(1000);
+        $("#clone-three").fadeToggle(1000);
+        $("#clone-four").fadeToggle(1000);
+        $("#clone-five").fadeToggle(1000);
+        $("#hideOne").fadeToggle(1000);
+        $("#hideTwo").fadeToggle(1000);
+        $("#hideThree").fadeToggle(1000);
+        $("#hideFour").fadeToggle(1000);
+        $("#hideFive").fadeToggle(1000);
+        $("#resetButtonTwo").fadeToggle(1000);
+        $("#resetButtonThree").fadeToggle(1000);
+        $("#resetButtonFour").fadeToggle(1000);
+        $("#resetButtonFive").fadeToggle(1000);
+    });
+    $("#resetButtonOne").hover(
+        function(){
+        $("#resetButtonOne").animate({fontSize: '2rem'}, "slow");
+    },
+        function(){
+        $("#resetButtonOne").animate({fontSize: '1.5rem'}, "slow");
+        }
+    );
 
-$(document).ready(function(){
+    //BUTTON TWO ANIMATIONS
     $("#hideTwo").click(function(){
         $("#clone-three").fadeToggle(1000);
         $("#clone-four").fadeToggle(1000);
         $("#clone-five").fadeToggle(1000);
+        $("#hideOne").fadeToggle(1000);
+        $("#hideTwo").fadeToggle(1000);
+        $("#hideThree").fadeToggle(1000);
+        $("#hideFour").fadeToggle(1000);
+        $("#hideFive").fadeToggle(1000);
+        $("#resetButtonOne").fadeToggle(1000);
+        $("#resetButtonThree").fadeToggle(1000);
+        $("#resetButtonFour").fadeToggle(1000);
+        $("#resetButtonFive").fadeToggle(1000);
     });
-});
+    $("#hideTwo").hover(
+        //over parameter
+        function(){
+        $("#hideTwo").animate({fontSize: '2rem'}, "slow");
+    },
+        //out parameter
+        function(){
+        $("#hideTwo").animate({fontSize: '1.5rem'}, "slow");
+        }
+    );
+    $("#resetButtonTwo").click(function(){
+        $("#clone-three").fadeToggle(1000);
+        $("#clone-four").fadeToggle(1000);
+        $("#clone-five").fadeToggle(1000);
+        $("#hideOne").fadeToggle(1000);
+        $("#hideTwo").fadeToggle(1000);
+        $("#hideThree").fadeToggle(1000);
+        $("#hideFour").fadeToggle(1000);
+        $("#hideFive").fadeToggle(1000);
+        $("#resetButtonOne").fadeToggle(1000);
+        $("#resetButtonThree").fadeToggle(1000);
+        $("#resetButtonFour").fadeToggle(1000);
+        $("#resetButtonFive").fadeToggle(1000);
+    });
+    $("#resetButtonTwo").hover(
+        function(){
+        $("#resetButtonTwo").animate({fontSize: '2rem'}, "slow");
+    },
+        function(){
+        $("#resetButtonTwo").animate({fontSize: '1.5rem'}, "slow");
+        }
+    );
 
-$(document).ready(function(){
+    //BUTTON THREE ANIMATIONS
     $("#hideThree").click(function(){
         $("#clone-four").fadeToggle(1000);
         $("#clone-five").fadeToggle(1000);
+        $("#hideOne").fadeToggle(1000);
+        $("#hideTwo").fadeToggle(1000);
+        $("#hideThree").fadeToggle(1000);
+        $("#hideFour").fadeToggle(1000);
+        $("#hideFive").fadeToggle(1000);
+        $("#resetButtonOne").fadeToggle(1000);
+        $("#resetButtonTwo").fadeToggle(1000);
+        $("#resetButtonFour").fadeToggle(1000);
+        $("#resetButtonFive").fadeToggle(1000);
     });
-});
+    $("#hideThree").hover(
+        //over parameter
+        function(){
+        $("#hideThree").animate({fontSize: '2rem'}, "slow");
+    },
+        //out parameter
+        function(){
+        $("#hideThree").animate({fontSize: '1.5rem'}, "slow");
+        }
+    );
+    $("#resetButtonThree").click(function(){
+        $("#clone-four").fadeToggle(1000);
+        $("#clone-five").fadeToggle(1000);
+        $("#hideOne").fadeToggle(1000);
+        $("#hideTwo").fadeToggle(1000);
+        $("#hideThree").fadeToggle(1000);
+        $("#hideFour").fadeToggle(1000);
+        $("#hideFive").fadeToggle(1000);
+        $("#resetButtonOne").fadeToggle(1000);
+        $("#resetButtonTwo").fadeToggle(1000);
+        $("#resetButtonFour").fadeToggle(1000);
+        $("#resetButtonFive").fadeToggle(1000);
+    });
+    $("#resetButtonThree").hover(
+        function(){
+        $("#resetButtonThree").animate({fontSize: '2rem'}, "slow");
+    },
+        function(){
+        $("#resetButtonThree").animate({fontSize: '1.5rem'}, "slow");
+        }
+    );
 
-$(document).ready(function(){
+    //BUTTON FOUR ANIMATIONS
     $("#hideFour").click(function(){
         $("#clone-five").fadeToggle(1000);
+        $("#hideOne").fadeToggle(1000);
+        $("#hideTwo").fadeToggle(1000);
+        $("#hideThree").fadeToggle(1000);
+        $("#hideFour").fadeToggle(1000);
+        $("#hideFive").fadeToggle(1000);
+        $("#resetButtonOne").fadeToggle(1000);
+        $("#resetButtonTwo").fadeToggle(1000);
+        $("#resetButtonThree").fadeToggle(1000);
+        $("#resetButtonFive").fadeToggle(1000);
     });
-});
+    $("#hideFour").hover(
+        //over parameter
+        function(){
+        $("#hideFour").animate({fontSize: '2rem'}, "slow");
+    },
+        //out parameter
+        function(){
+        $("#hideFour").animate({fontSize: '1.5rem'}, "slow");
+        }
+    );
+    $("#resetButtonFour").click(function(){
+        $("#clone-five").fadeToggle(1000);
+        $("#hideOne").fadeToggle(1000);
+        $("#hideTwo").fadeToggle(1000);
+        $("#hideThree").fadeToggle(1000);
+        $("#hideFour").fadeToggle(1000);
+        $("#hideFive").fadeToggle(1000);
+        $("#resetButtonOne").fadeToggle(1000);
+        $("#resetButtonTwo").fadeToggle(1000);
+        $("#resetButtonThree").fadeToggle(1000);
+        $("#resetButtonFive").fadeToggle(1000);
+    });
+    $("#resetButtonFour").hover(
+        function(){
+        $("#resetButtonFour").animate({fontSize: '2rem'}, "slow");
+    },
+        function(){
+        $("#resetButtonFour").animate({fontSize: '1.5rem'}, "slow");
+        }
+    );
 
-$(document).ready(function(){
+    //BUTTON FIVE ANIMATIONS
     $("#hideFive").click(function(){
         $("#clone-one").fadeToggle(1000);
         $("#clone-two").fadeToggle(1000);
         $("#clone-three").fadeToggle(1000);
         $("#clone-four").fadeToggle(1000);
         $("#clone-five").fadeToggle(1000);
+        $("#hideOne").fadeToggle(1000);
+        $("#hideTwo").fadeToggle(1000);
+        $("#hideThree").fadeToggle(1000);
+        $("#hideFour").fadeToggle(1000);
+        $("#hideFive").fadeToggle(1000);
+        $("#resetButtonOne").fadeToggle(1000);
+        $("#resetButtonTwo").fadeToggle(1000);
+        $("#resetButtonThree").fadeToggle(1000);
+        $("#resetButtonFour").fadeToggle(1000);
     });
+    $("#hideFive").hover(
+        //over parameter
+        function(){
+        $("#hideFive").animate({fontSize: '2rem'}, "slow");
+    },
+        //out parameter
+        function(){
+        $("#hideFive").animate({fontSize: '1.5rem'}, "slow");
+        }
+    );
+    $("#resetButtonFive").click(function(){
+        $("#clone-one").fadeToggle(1000);
+        $("#clone-two").fadeToggle(1000);
+        $("#clone-three").fadeToggle(1000);
+        $("#clone-four").fadeToggle(1000);
+        $("#clone-five").fadeToggle(1000);
+        $("#hideOne").fadeToggle(1000);
+        $("#hideTwo").fadeToggle(1000);
+        $("#hideThree").fadeToggle(1000);
+        $("#hideFour").fadeToggle(1000);
+        $("#hideFive").fadeToggle(1000);
+        $("#resetButtonOne").fadeToggle(1000);
+        $("#resetButtonTwo").fadeToggle(1000);
+        $("#resetButtonThree").fadeToggle(1000);
+        $("#resetButtonFour").fadeToggle(1000);
+    });
+    $("#resetButtonFive").hover(
+        function(){
+        $("#resetButtonFive").animate({fontSize: '2rem'}, "slow");
+    },
+        function(){
+        $("#resetButtonFive").animate({fontSize: '1.5rem'}, "slow");
+        }
+    );
 });
+
+/*
+    Class Color represents all methods:
+    setHex, setLocked, toggleLocked, generateHex, copyToClipboard, and several loops
+*/
 
 class Color {
     constructor (hex, element){

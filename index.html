@@ -34,7 +34,7 @@
                 Objective: Create a working application/website of our choosing. We are also allowed to follow along with an online tutorial to create the application/website with our own spin on it. 
             </p>
             <p class="intro-text">
-                Application concept and code followed along for the YouTube Channel, Tyler Potts: <a href="https://www.youtube.com/watch?v=y9F-XzrYIrs&list=PL2V0XMPQmXlFzTI7VMHHIGbAeqm9hAZcL&index=7&t=29s">Build a Color Palette Generator in Javascript - JavaScript beginner tutorial</a>
+                Application concept and code followed along for the YouTube Channel, Tyler Potts: <a href="https://www.youtube.com/watch?v=y9F-XzrYIrs&list=PL2V0XMPQmXlFzTI7VMHHIGbAeqm9hAZcL&index=7&t=29s" target="_blank">Build a Color Palette Generator in Javascript - JavaScript beginner tutorial</a>
             </p>
         </div>
 
@@ -52,15 +52,33 @@
         </p>
 
         <!-- Adding buttons to use JQuery -->
-        <button id="hideOne">SHOW 1ST COLOR ONLY</button>
-        <br>
-        <button id="hideTwo">SHOW 1ST & 2ND COLOR ONLY</button>
-        <br>
-        <button id="hideThree">SHOW 1ST - 3RD COLOR ONLY</button>
-        <br>
-        <button id="hideFour">SHOW 1ST - 4TH COLOR ONLY</button>
-        <br>
-        <button id="hideFive">SHOW/HIDE ALL FIVE COLORS</button>
+        <div id="showHideButtons">
+            <div>
+                <button id="hideOne">SHOW 1ST COLOR ONLY</button>
+                <button id="resetButtonOne">RESET</button>
+            </div>
+            <br>
+            <div>
+                <button id="hideTwo">SHOW 1ST & 2ND COLOR ONLY</button>
+                <button id="resetButtonTwo">RESET</button> 
+            </div>
+            <br>
+            <div>
+                <button id="hideThree">SHOW 1ST - 3RD COLOR ONLY</button>
+                <button id="resetButtonThree">RESET</button> 
+            </div>
+            <br>
+            <div>
+                <button id="hideFour">SHOW 1ST - 4TH COLOR ONLY</button>
+                <button id="resetButtonFour">RESET</button> 
+            </div>
+            <br>
+            <div>
+                <button id="hideFive">SHOW/HIDE ALL FIVE COLORS</button>
+                <button id="resetButtonFive">RESET</button>
+            </div>
+            <br>
+        </div>
         <br>
 
         <!-- Start of the Generator Output
