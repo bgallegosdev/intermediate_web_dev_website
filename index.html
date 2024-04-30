@@ -21,8 +21,25 @@
     <!-- Using JQuery for some extra features -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <!-- Using Favicon From (Open Source Liscensing--Checked): https://www.svgrepo.com/svg/213308/color-palette-paint -->
+    <link rel="icon" type="image/x-icon" href="./images/color-palette-paint-svgrepo-com.png">
+
+
 </head>
 <body>
+    <!-- Starting Header -->
+    <header>
+        <!-- Begin Header about Page Context -->
+        <span id="topPage"></span>
+        <nav id="home">
+            <div class="home_nav">
+                <a class="active" href="#topPage">Home</a>
+                <a href="#clone-one">Color Palette</a>
+                <a href="#colorTestingDiv">Color Testing</a>
+                <a href="#footerText">Page Bottom</a>
+            </div>
+        </nav>
+    </header>
 
     <!-- Staring Main -->
     <main>
@@ -185,7 +202,7 @@
     <br>
 
     <!-- Testing a color via input from user, also testing the 'Copy to Clipboard' feature -->
-    <div>
+    <div id="colorTestingDiv">
         <h3>Let's test a color that you like!</h3>
         <p>Simply click 'Copy' on a color you like above and insert into the text box below. You may also type out a hex color manually:</p>
         <input type="text" id="colorInput" placeholder="Insert the Hex Color!">
@@ -208,6 +225,18 @@
     </div>
 
     </main>
+
+    <!-- Staring Footer -->
+    <footer id="footerText">
+        <h4 id="footerHeader">RANDOM HEX COLOR GENERATOR</h4>
+        <span>Created by: Benjamin Gallegos</span>
+        <p>Assignment: Semester Project</p>
+        <p>Contact: bgallegos8@collin.edu</p>
+        <p>*Resources Sited:</p>
+        <p><a href="https://www.youtube.com/watch?v=y9F-XzrYIrs&list=PL2V0XMPQmXlFzTI7VMHHIGbAeqm9hAZcL&index=7&t=29s" target="_blank">Tyler Potts: Build a Color Palette Generator in Javascript - JavaScript beginner tutorial</a></p>
+
+        <p id="botLink"><a href="#topPage"> Back to the Top of the Page</a></p>        
+    </footer>
 
     <script src="./colorPicker.js"></script>
 </body>
