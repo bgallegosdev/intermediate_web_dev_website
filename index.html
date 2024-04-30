@@ -48,7 +48,7 @@
         <!-- Description and Button for Generator Each Color Palette -->
         <p>
             <!-- Indicates 'Space' or a 'Click' to generate palette -->
-            Press or Click [ <button class="generator-button">SPACE</button> ] to generate a new color palette containing 5 different colors based on Hex color syntax!
+            Click [ <button class="generator-button">SPACE</button> ] to generate a new color palette containing 5 different colors based on Hex color syntax!
         </p>
 
         <!-- Adding buttons to use JQuery -->
@@ -176,6 +176,35 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <br>
+    <hr class="divider">
+    <br>
+    <hr class="divider">
+    <br>
+
+    <!-- Testing a color via input from user, also testing the 'Copy to Clipboard' feature -->
+    <div>
+        <h3>Let's test a color that you like!</h3>
+        <p>Simply click 'Copy' on a color you like above and insert into the text box below. You may also type out a hex color manually:</p>
+        <input type="text" id="colorInput" placeholder="Insert the Hex Color!">
+        <input type="submit" value="Submit Hex Color" id="submitBtn">
+        <input type="submit" value="Reset" id="resetBtn">
+    </div>
+
+    <br>
+
+    <div id="lightBackground">
+        <p id="outputOne"></p>
+    </div>
+
+    <div id="darkBackground">
+        <p id="outputTwo"></p>
+    </div>
+
+    <div id="greyBackground">
+        <p id="outputThree"></p>
     </div>
 
     </main>

@@ -344,3 +344,78 @@ h4{
         margin-bottom: 1rem;
     }
 } */
+
+
+/* Using different backgrounds on the text input */
+#lightBackground{
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#darkBackground{
+    background-color: rgb(0, 0, 0);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#greyBackground{
+    background-color: rgb(120, 120, 120);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#outputOne{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#outputTwo{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#outputThree{
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 3rem;
+    color: white;
+    margin: 5px;
+}
+
+#colorInput{
+    background-color: white;
+    font-size: 2.5rem;
+}
+
+#submitBtn{
+    margin: 5px;
+    color: var(--primary);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.5rem;
+    border: solid #e3e3e3;
+    background-color: #e3e3e3;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px var(--primary);
+    text-shadow: 1px 1px 2px black;
+}
+
+#resetBtn{
+    margin: 5px;
+    color: var(--primary);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.5rem;
+    border: solid #e3e3e3;
+    background-color: #e3e3e3;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px var(--primary);
+    text-shadow: 1px 1px 2px black;
+}

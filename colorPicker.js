@@ -4,18 +4,6 @@
 
 // This semester project is based on JavaScript code we learned in class, using it in an application like a JavaScript/HTML/CSS Random Color Palette Generator. Credit to the tutorial I followed online for this project: Source: YouTube/Channel: Tyler Potts/Link: https://www.youtube.com/watch?v=y9F-XzrYIrs&list=PL2V0XMPQmXlFzTI7VMHHIGbAeqm9hAZcL&index=7&t=29s
 
-/*
-TESTING JQUERY CLONE FUNCTION
-$(document).ready(function(){
-    $("#addPalette").click(function(){
-        let lineBreak = document.createElement("br");
-        let clone = $(".clone-use").clone();
-        let clones = $(".outline").clone();
-        $("main").append(lineBreak);
-        $("main").append(clones);
-    });
-});
-*/
 
 //First JQuery Button Hides All Palettes Except for Palette One, Using fadeToggle()
 $(document).ready(function(){
@@ -414,3 +402,59 @@ for(let i = 0; i < color_elements.length; i++)
             }
         }
     });
+
+/*
+    Testing hex color section using input from HTML
+*/
+//Creating variables to hold both the Submit Button and Color Input to use in the generation of testing text
+let button = document.querySelector("#submitBtn");
+let resetButton = document.querySelector("#resetBtn");
+let colorChoice = document.querySelector("#colorInput");
+let messageOne = document.querySelector("#outputOne");
+let messageTwo = document.querySelector("#outputTwo");
+let messageThree = document.querySelector("#outputThree");
+
+// Onload the document will hide the divs used for testing the text
+$(document).ready(function(){
+    $("#lightBackground").fadeToggle(1000);
+    $("#darkBackground").fadeToggle(1000);
+    $("#greyBackground").fadeToggle(1000);
+});
+
+// On a click, the divs will reveal the tested argument
+$(document).ready(function(){
+    $("#submitBtn").click(function(){
+        $("#submitBtn").fadeToggle(1000);
+        $("#lightBackground").fadeToggle(1000);
+        $("#darkBackground").fadeToggle(1000);
+        $("#greyBackground").fadeToggle(1000);
+    });
+});
+
+$(document).ready(function(){
+    $("#resetBtn").click(function(){
+        $("#submitBtn").fadeToggle(1000);
+        $("#lightBackground").fadeToggle(1000);
+        $("#darkBackground").fadeToggle(1000);
+        $("#greyBackground").fadeToggle(1000);
+    });
+});
+
+//Event Listener for the Submit Button
+button.addEventListener('click', function(){
+    console.log(colorChoice.value);
+
+    let color = colorChoice.value;
+
+    // setting font color to the color of the input
+    messageOne.style.color = color;
+    messageTwo.style.color = color;
+    messageThree.style.color = color;
+
+    //Testing message output on different backgrounds
+    messageOne.textContent = "Here is your hex color choice entered above: " + colorChoice.value + "! Do you like it on the WHITE background?";
+
+    messageTwo.textContent = "Here is your hex color choice entered above: " + colorChoice.value + "! Do you like it on the BLACK background?";
+
+    messageThree.textContent = "Here is your hex color choice entered above: " + colorChoice.value + "! Do you like it on the GREY background?";
+});
